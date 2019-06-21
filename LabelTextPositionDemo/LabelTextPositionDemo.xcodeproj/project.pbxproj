@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA5E8EC222BA11F20009EDD7 /* UIView+TYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5E8EC122BA11F20009EDD7 /* UIView+TYFrame.m */; };
 		EA91F55322B8B8AD00C20ABB /* TYCustomAlignmentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA91F55222B8B8AD00C20ABB /* TYCustomAlignmentLabel.m */; };
 		EAD2395622B8705C00CF3368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD2395522B8705C00CF3368 /* AppDelegate.m */; };
 		EAD2395922B8705C00CF3368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD2395822B8705C00CF3368 /* ViewController.m */; };
@@ -14,10 +15,14 @@
 		EAD2395E22B8705D00CF3368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD2395D22B8705D00CF3368 /* Assets.xcassets */; };
 		EAD2396122B8705D00CF3368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD2395F22B8705D00CF3368 /* LaunchScreen.storyboard */; };
 		EAD2396422B8705D00CF3368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD2396322B8705D00CF3368 /* main.m */; };
-		EADCC8BB22BC5A0300F50D41 /* UIView+TYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EADCC8B922BC5A0300F50D41 /* UIView+TYFrame.m */; };
+		EADCC8B022BB2DCE00F50D41 /* PTAnimateScrollTextPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EADCC8AF22BB2DCE00F50D41 /* PTAnimateScrollTextPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA5E8EC022BA11F20009EDD7 /* UIView+TYFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TYFrame.h"; sourceTree = "<group>"; };
+		EA5E8EC122BA11F20009EDD7 /* UIView+TYFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYFrame.m"; sourceTree = "<group>"; };
+		EA5E8EC322BA132C0009EDD7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EA5E8EC422BA1B2C0009EDD7 /* PTTextScrollTypeDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTTextScrollTypeDefine.h; sourceTree = "<group>"; };
 		EA91F55122B8B8AD00C20ABB /* TYCustomAlignmentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCustomAlignmentLabel.h; sourceTree = "<group>"; };
 		EA91F55222B8B8AD00C20ABB /* TYCustomAlignmentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCustomAlignmentLabel.m; sourceTree = "<group>"; };
 		EA91F55422B8D62200C20ABB /* TYCustomAlignmentDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCustomAlignmentDefine.h; sourceTree = "<group>"; };
@@ -31,8 +36,8 @@
 		EAD2396022B8705D00CF3368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAD2396222B8705D00CF3368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAD2396322B8705D00CF3368 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EADCC8B922BC5A0300F50D41 /* UIView+TYFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYFrame.m"; sourceTree = "<group>"; };
-		EADCC8BA22BC5A0300F50D41 /* UIView+TYFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TYFrame.h"; sourceTree = "<group>"; };
+		EADCC8AE22BB2DCE00F50D41 /* PTAnimateScrollTextPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTAnimateScrollTextPresenter.h; sourceTree = "<group>"; };
+		EADCC8AF22BB2DCE00F50D41 /* PTAnimateScrollTextPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTAnimateScrollTextPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,31 @@
 			path = TYCustomAlignmentLabel;
 			sourceTree = "<group>";
 		};
+		EA5E8EBD22BA11BF0009EDD7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E8EBE22BA11CB0009EDD7 /* Categopry */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EA5E8EBE22BA11CB0009EDD7 /* Categopry */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E8EBF22BA11D50009EDD7 /* UIView+Category */,
+			);
+			path = Categopry;
+			sourceTree = "<group>";
+		};
+		EA5E8EBF22BA11D50009EDD7 /* UIView+Category */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E8EC022BA11F20009EDD7 /* UIView+TYFrame.h */,
+				EA5E8EC122BA11F20009EDD7 /* UIView+TYFrame.m */,
+			);
+			path = "UIView+Category";
+			sourceTree = "<group>";
+		};
 		EAD2394822B8705C00CF3368 = {
 			isa = PBXGroup;
 			children = (
@@ -75,44 +105,23 @@
 		EAD2395322B8705C00CF3368 /* LabelTextPositionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				EADCC8B622BC5A0300F50D41 /* Utils */,
+				EA5E8EBD22BA11BF0009EDD7 /* Utils */,
 				EA5E8EBC22B9D3160009EDD7 /* TYCustomAlignmentLabel */,
 				EAD2395422B8705C00CF3368 /* AppDelegate.h */,
 				EAD2395522B8705C00CF3368 /* AppDelegate.m */,
 				EAD2395722B8705C00CF3368 /* ViewController.h */,
 				EAD2395822B8705C00CF3368 /* ViewController.m */,
+				EA5E8EC422BA1B2C0009EDD7 /* PTTextScrollTypeDefine.h */,
+				EADCC8AE22BB2DCE00F50D41 /* PTAnimateScrollTextPresenter.h */,
+				EADCC8AF22BB2DCE00F50D41 /* PTAnimateScrollTextPresenter.m */,
 				EAD2395A22B8705C00CF3368 /* Main.storyboard */,
 				EAD2395D22B8705D00CF3368 /* Assets.xcassets */,
 				EAD2395F22B8705D00CF3368 /* LaunchScreen.storyboard */,
+				EA5E8EC322BA132C0009EDD7 /* PrefixHeader.pch */,
 				EAD2396222B8705D00CF3368 /* Info.plist */,
 				EAD2396322B8705D00CF3368 /* main.m */,
 			);
 			path = LabelTextPositionDemo;
-			sourceTree = "<group>";
-		};
-		EADCC8B622BC5A0300F50D41 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				EADCC8B722BC5A0300F50D41 /* Categopry */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		EADCC8B722BC5A0300F50D41 /* Categopry */ = {
-			isa = PBXGroup;
-			children = (
-				EADCC8B822BC5A0300F50D41 /* UIView+Category */,
-			);
-			path = Categopry;
-			sourceTree = "<group>";
-		};
-		EADCC8B822BC5A0300F50D41 /* UIView+Category */ = {
-			isa = PBXGroup;
-			children = (
-				EADCC8B922BC5A0300F50D41 /* UIView+TYFrame.m */,
-				EADCC8BA22BC5A0300F50D41 /* UIView+TYFrame.h */,
-			);
-			path = "UIView+Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +194,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADCC8B022BB2DCE00F50D41 /* PTAnimateScrollTextPresenter.m in Sources */,
 				EAD2395922B8705C00CF3368 /* ViewController.m in Sources */,
-				EADCC8BB22BC5A0300F50D41 /* UIView+TYFrame.m in Sources */,
+				EA5E8EC222BA11F20009EDD7 /* UIView+TYFrame.m in Sources */,
 				EA91F55322B8B8AD00C20ABB /* TYCustomAlignmentLabel.m in Sources */,
 				EAD2396422B8705D00CF3368 /* main.m in Sources */,
 				EAD2395622B8705C00CF3368 /* AppDelegate.m in Sources */,
@@ -333,6 +343,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = LabelTextPositionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -351,6 +363,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = LabelTextPositionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

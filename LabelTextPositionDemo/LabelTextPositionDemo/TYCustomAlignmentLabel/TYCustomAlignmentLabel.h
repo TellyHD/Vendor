@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TYCustomAlignmentLabel : UILabel
+@interface TYCustomAlignmentLabel : UILabel <NSCopying>
 
 /**
  * 位移枚举值，默认值TYTextAlignmentTopLeft

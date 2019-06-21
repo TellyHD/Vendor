@@ -10,6 +10,10 @@
 
 #import "TYCustomAlignmentLabel.h"
 
+#import "PTTextScrollTypeDefine.h"
+
+#import "PTAnimateScrollTextPresenter.h"
+
 
 
 
@@ -17,11 +21,17 @@
     TYTextAlignment _horAlignment;
     TYTextAlignment _verAlignment;
     TYTextAlignment _combinAlignment;
+    
+    CFTimeInterval _preTimeStamp;
+
 }
 
 @property (weak, nonatomic) IBOutlet TYCustomAlignmentLabel *alignLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *horAlignButtonArray;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *verAlignButtonArray;
+
+
+
 
 @end
 
@@ -42,6 +52,8 @@
     [self pt_updateVerAlignButtonSelectedState];
     
     
+    [PTAnimateScrollTextPresenter pt_sharedInstance].originLabelFrame = self.alignLabel.frame;
+    [PTAnimateScrollTextPresenter pt_sharedInstance].originLabel = self.alignLabel;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -49,6 +61,9 @@
     
     [self pt_updateTextLabelDisplay];
 }
+
+
+#pragma mark - Event Response
 
 - (IBAction)pt_clickHorAlignButtonAction:(UIButton *)sender {
     if (sender.selected == NO) {
@@ -79,6 +94,39 @@
     
 }
 
+
+- (IBAction)ty_clickSatrtAnimateButtonAction:(UIButton *)sender {
+    
+    
+    
+}
+
+- (IBAction)ty_clickPauseAnimateButtonAction:(UIButton *)sender {
+
+}
+
+- (IBAction)pt_clickAnimateLeftToRightAction:(UIButton *)sender {
+    [[PTAnimateScrollTextPresenter pt_sharedInstance] pt_startAnimateWithScrollType:PTTextScrollTypeLeftToRight];
+    
+}
+
+- (IBAction)pt_clickAnimateRightToLeftAction:(UIButton *)sender {
+    [[PTAnimateScrollTextPresenter pt_sharedInstance] pt_startAnimateWithScrollType:PTTextScrollTypeRightToLeft];
+   
+}
+
+- (IBAction)pt_clickAnimateTopToBottomAction:(UIButton *)sender {
+    [[PTAnimateScrollTextPresenter pt_sharedInstance] pt_startAnimateWithScrollType:PTTextScrollTypeTopToBottom];
+    
+}
+
+- (IBAction)pt_clickAnimateBottomToTopAction:(UIButton *)sender {
+    [[PTAnimateScrollTextPresenter pt_sharedInstance] pt_startAnimateWithScrollType:PTTextScrollTypeBottomToTop];
+
+}
+
+
+#pragma mark - Private Method
 - (void)pt_updateTextLabelDisplay {
     _combinAlignment = _horAlignment | _verAlignment;
     
@@ -110,7 +158,7 @@
     }
 }
 
-
+#pragma mark - Getter
 
 
 @end

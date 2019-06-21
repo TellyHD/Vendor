@@ -55,8 +55,24 @@
 }
 
 - (void)drawTextInRect:(CGRect)rect {
+    printf(__FUNCTION__);
+    printf("\n");
     CGRect actualRect = [self textRectForBounds:rect limitedToNumberOfLines:self.numberOfLines];
     [super drawTextInRect:actualRect];
+}
+
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(nullable NSZone *)zone {
+    TYCustomAlignmentLabel *label = [[[self class] allocWithZone:zone] initWithFrame:self.frame];
+    label.textColor = self.textColor;
+    label.numberOfLines = self.numberOfLines;
+    label.font = self.font;
+    label.text = self.text;
+    label.customAlignment = self.customAlignment;
+    label.backgroundColor = self.backgroundColor;
+    
+    return label;
 }
 
 
