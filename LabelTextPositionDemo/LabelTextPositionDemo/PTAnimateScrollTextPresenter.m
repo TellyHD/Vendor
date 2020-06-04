@@ -395,6 +395,7 @@ static PTAnimateScrollTextPresenter *_sharedInstance = nil;
 #pragma mark - Setter
 - (void)setOriginLabel:(UILabel<NSCopying> *)originLabel {
     _originLabel = originLabel;
+    _originLabelFrame = _originLabel.frame;
 
     _textRect = [_originLabel textRectForBounds:_originLabel.bounds limitedToNumberOfLines:_originLabel.numberOfLines];
     

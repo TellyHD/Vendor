@@ -52,7 +52,6 @@
     [self pt_updateVerAlignButtonSelectedState];
     
     
-    [PTAnimateScrollTextPresenter pt_sharedInstance].originLabelFrame = self.alignLabel.frame;
     [PTAnimateScrollTextPresenter pt_sharedInstance].originLabel = self.alignLabel;
 }
 
@@ -101,9 +100,7 @@
     
 }
 
-- (IBAction)ty_clickPauseAnimateButtonAction:(UIButton *)sender {
 
-}
 
 - (IBAction)pt_clickAnimateLeftToRightAction:(UIButton *)sender {
     [[PTAnimateScrollTextPresenter pt_sharedInstance] pt_startAnimateWithScrollType:PTTextScrollTypeLeftToRight];
